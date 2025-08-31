@@ -15,9 +15,11 @@ Bu proje, bir Excel dosyasındaki telefon numaralarını tespit etmek ve farklı
    ```
 
 **Gereksinimler**
+```
 Python 3.x
 pandas
 openpyxl
+```
 
 ## Klasör Yapısı
 ```
