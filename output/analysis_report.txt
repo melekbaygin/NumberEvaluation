@@ -1,0 +1,15 @@
+--- Analysis Results ---
+Total Phone Number: 10000
+
+--- Version 1 ---
+Phone Numbers Successfully Found: 2433
+Missing or Incorrectly Found: 7567
+Success Rate: %24.33
+
+--- Version 2 ---
+Phone Numbers Successfully Found: 9989
+Missing or Incorrectly Found: 11
+Success Rate: %99.89
+
+--- Comparison ---
+Version 2 has better performance.
