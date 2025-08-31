@@ -20,19 +20,20 @@ pandas
 openpyxl
 
 ## Klasör Yapısı
+```
 NumberEvaluation/
- ├── data/
- │    └── sample_phone_number.xlsx
- │
- ├── output/
- │    ├── find_number_v1.xlsx
- │    ├── find_number_v2.xlsx
- │
- └── src/
-      ├── number-scanner-v1.py
-      ├── number-scanner-v2.py
-      ├── achievement.py
-
+├── data/
+│   └── sample_phone_number.xlsx
+│
+├── output/
+│   ├── find_number_v1.xlsx
+│   └── find_number_v2.xlsx
+│
+└── src/
+    ├── number-scanner-v1.py
+    ├── number-scanner-v2.py
+    └── achievement.py
+```
 ## Kullanım
 
 1. **Girdi Dosyasını Hazırlayın:**  
