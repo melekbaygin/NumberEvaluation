@@ -80,25 +80,38 @@ def calculate_performance(df, correct_set):
 total_ana, correctly_found_v1, found_v1, not_found_v1, success_rate_v1 = calculate_performance(df_v1, ana_set)
 total_ana, correctly_found_v2, found_v2, not_found_v2, success_rate_v2 = calculate_performance(df_v2, ana_set)
 
-# Sonuçları ekrana yazdır
-print("\n--- Analysis Results ---")
-print(f"Total Phone Number: {total_ana}\n")
+# Raporu dosyaya yaz
+report_lines = [
+    "--- Analysis Results ---",
+    f"Total Phone Number: {total_ana}\n",
+    "--- Version 1 ---",
+    f"Phone Numbers Successfully Found: {correctly_found_v1}",
+    f"Missing or Incorrectly Found: {not_found_v1}",
+    f"Success Rate: %{success_rate_v1:.2f}\n",
+    "--- Version 2 ---",
+    f"Phone Numbers Successfully Found: {correctly_found_v2}",
+    f"Missing or Incorrectly Found: {not_found_v2}",
+    f"Success Rate: %{success_rate_v2:.2f}\n",
+    "--- Comparison ---"
+]
 
-print("--- Version 1 ---")
-print(f"Phone Numbers Successfully Found: {correctly_found_v1}")
-print(f"Missing or Incorrectly Found: {not_found_v1}")
-print(f"Success Rate: %{success_rate_v1:.2f}")
-
-print("\n--- Version 2 ---")
-print(f"Phone Numbers Successfully Found: {correctly_found_v2}")
-print(f"Missing or Incorrectly Found: {not_found_v2}")
-print(f"Success Rate: %{success_rate_v2:.2f}")
-
-# Karşılaştırma ve Sonuç
-print("\n--- Comparison ---")
 if success_rate_v1 > success_rate_v2:
-    print("Version 1 has better performance.")
+    report_lines.append("Version 1 has better performance.")
 elif success_rate_v2 > success_rate_v1:
-    print("Version 2 has better performance.")
+    report_lines.append("Version 2 has better performance.")
 else:
-    print("Both versions have the same performance.")
+    report_lines.append("Both versions have the same performance.")
+
+# Terminale yazdır
+print("\n".join(report_lines))
+
+# output klasörüne raporu kaydet
+output_dir = os.path.join(BASE_DIR,"..", "output")
+os.makedirs(output_dir, exist_ok=True)
+report_path = os.path.join(output_dir, "analysis_report.txt")
+
+with open(report_path, "w", encoding="utf-8") as f:
+    for line in report_lines:
+        f.write(line + "\n")
+
+print(f"\nAnalysis report saved to: {report_path}")
