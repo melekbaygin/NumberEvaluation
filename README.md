@@ -15,7 +15,7 @@ Projeyi klonladıktan sonra scriptleri çalıştırmak istemeyen veya kurulum ad
 Bu dosyalar şunlardır:  
 - `find_number_v1.xlsx` → Version 1 algoritması tarafından tespit edilen telefon numaraları  
 - `find_number_v2.xlsx` → Version 2 algoritması tarafından tespit edilen telefon numaraları  
-- `performance_report.xlsx` → Version 1 ve Version 2 sonuçlarının karşılaştırmalı başarı metrikleri (precision, recall, F1-score vb.)  
+- `analysis_report.xlsx` → Version 1 ve Version 2 sonuçlarının karşılaştırmalı başarı metrikleri
 
 Böylece projeyi derinlemesine incelemek isteyen kullanıcılar kurulum yapmadan doğrudan `output/` klasöründeki dosyalardan sonuçları analiz edebilirler.
 
