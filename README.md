@@ -2,6 +2,23 @@
 
 Bu proje, bir Excel dosyasındaki telefon numaralarını tespit etmek ve farklı algoritmaların başarı oranlarını karşılaştırmak için geliştirilmiştir.
 
+## 🚀 Kurulum ve Çalıştırma
+1. **Projeyi Klonla**
+```sh
+git clone https://github.com/melekbaygin/NumberEvaluation.git
+cd NumberEvaluation
+```
+## 📂 Çıktılar Hakkında
+
+Projeyi klonladıktan sonra scriptleri çalıştırmak istemeyen veya kurulum adımlarıyla uğraşmak istemeyen kullanıcılar için, **önceden üretilmiş sonuç dosyaları** `output/` klasörü altında hazır olarak bulunmaktadır.  
+
+Bu dosyalar şunlardır:  
+- `find_number_v1.xlsx` → Version 1 algoritması tarafından tespit edilen telefon numaraları  
+- `find_number_v2.xlsx` → Version 2 algoritması tarafından tespit edilen telefon numaraları  
+- `performance_report.xlsx` → Version 1 ve Version 2 sonuçlarının karşılaştırmalı başarı metrikleri (precision, recall, F1-score vb.)  
+
+Böylece projeyi derinlemesine incelemek isteyen kullanıcılar kurulum yapmadan doğrudan `output/` klasöründeki dosyalardan sonuçları analiz edebilirler.
+
 ## Excel Formulu 
 
 =COUNTIF(C2:C99999,"<>") : C2 ile C99999 arasındaki boş olmayan hücreleri sayar.
