@@ -2,6 +2,10 @@
 
 Bu proje, bir Excel dosyasındaki telefon numaralarını tespit etmek ve farklı algoritmaların başarı oranlarını karşılaştırmak için geliştirilmiştir.
 
+## Excel Formulu 
+
+=COUNTIF(C2:C99999,"<>") : C2 ile C99999 arasındaki boş olmayan hücreleri sayar.
+
 ## Kurulum
 
 1. **Python Kurulumu**  
@@ -21,20 +25,31 @@ pandas
 openpyxl
 ```
 
+## ⚠️ Önemli Not
+Karşılaştırma scripti (`achievement.py`) çalıştırılmadan **önce** aşağıdaki adımlar yapılmalıdır:
+
+1. `number_scanner_v1.py` çalıştır → `output/find_number_v1.xlsx` oluşturur.  
+2. `number_scanner_v2.py` çalıştır → `output/find_number_v2.xlsx` oluşturur.  
+3. Son olarak `achievement.py` çalıştır → bu dosyaları ve `data/sample_phone_number.xlsx` dosyasını kullanarak başarı oranlarını hesaplar.  
+
+Eğer 1 ve 2. adımlar yapılmadan doğrudan `achievement.py` çalıştırılırsa, gerekli dosyalar bulunamayacağı için hata alırsınız.
+
 ## Klasör Yapısı
 ```
 NumberEvaluation/
-├── data/
-│   └── sample_phone_number.xlsx
-│
-├── output/
-│   ├── find_number_v1.xlsx
-│   └── find_number_v2.xlsx
-│
-└── src/
-    ├── number-scanner-v1.py
-    ├── number-scanner-v2.py
-    └── achievement.py
+ ├── data/
+ │    └── sample_phone_number.xlsx
+ │
+ ├── output/
+ │    ├── find_number_v1.xlsx
+ │    ├── find_number_v2.xlsx
+ │    └── analysis_report.xlsx
+ │
+ └── src/
+      ├── number-scanner-v1.py
+      ├── number-scanner-v2.py
+      ├── achievement.py
+
 ```
 ## Kullanım
 
