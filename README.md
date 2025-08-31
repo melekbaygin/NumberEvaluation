@@ -63,8 +63,8 @@ NumberEvaluation/
  │    └── analysis_report.xlsx
  │
  └── src/
-      ├── number-scanner-v1.py
-      ├── number-scanner-v2.py
+      ├── number_scanner_v1.py
+      ├── number_scanner_v2.py
       ├── achievement.py
 
 ```
@@ -76,11 +76,11 @@ NumberEvaluation/
 2. **Telefon Numaralarını Tespit Et:**
    - V1 için:
      ```sh
-     python src/number-scanner-v1.py
+     python src/number_scanner_v1.py
      ```
    - V2 için:
      ```sh
-     python src/number-scanner-v2.py
+     python src/number_scanner_v2.py
      ```
 
    Çıktılar [output](http://_vscodecontentref_/3) klasörüne kaydedilecektir.
@@ -92,10 +92,10 @@ NumberEvaluation/
 Bu adımda, her iki versiyonun bulduğu numaralar ile orijinal veri karşılaştırılır ve başarı oranları ekrana yazdırılır.
 
 ## Açıklamalar
-1. number-scanner-v1.py:
+1. number_scanner_v1.py:
 Basit bir regex ile Türk telefon numaralarını bulur.
 
-2. number-scanner-v2.py:
+2. number_scanner_v2.py:
 Daha esnek ve kapsamlı bir regex ile farklı formatlardaki numaraları bulur.
 
 3. achievement.py:
